@@ -1,0 +1,1 @@
+print('This is the Income Statement financial instrumnt ready to use...')
