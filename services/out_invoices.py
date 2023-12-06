@@ -5,15 +5,12 @@ from typing import Optional
 class Invoice:
     id: int
     date: str
-    client_name: str
+    name: str
     amount: float
-
-    def import_file(self):
-        print(f"Importing {self.name} receivable...")
 
 
 @dataclass
-class Payable(Invoice):
+class Receivable(Invoice):
     due_date: str
     description: Optional[str] = None
 
