@@ -1,12 +1,24 @@
 from dataclasses import dataclass
+from typing import Optional
 
 @dataclass
-class Payables:
+class Invoice:
     id: int
-    name: str
-    amount: float
     date: str
-    status: str
+    client_name: str
+    amount: float
 
     def import_file(self):
         print(f"Importing {self.name} receivable...")
+
+
+@dataclass
+class Payable(Invoice):
+    due_date: str
+    description: Optional[str] = None
+
+
+@dataclass
+class Receipt(Invoice):
+    paid_date: str
+    description: Optional[str] = None
