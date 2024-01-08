@@ -4,6 +4,7 @@ from typing import Optional
 @dataclass
 class Invoice:
     id: int
+    number: int
     date: str
     name: str
     amount: float
